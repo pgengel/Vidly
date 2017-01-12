@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -17,7 +19,23 @@ namespace Vidly.Controllers
             //return HttpNotFound()
             //return RedirectToAction("View", "Controller", new {page = 1, sortBy= "name"}) Controller/View?page=1&sortBy=name
 
-            return View(movie);
+
+            //ViewData["Movie"] = movie; // worse way of passing data to the view then return View(movie);
+            //ViewBag.Movie = movie;
+
+            var customers = new List<Customer>
+            {
+                new Customer { Name = "C1"},
+                new Customer { Name = "C2"}
+            };
+
+            var viewModel = new RandomMovieViewModel()
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Edit(int movieId) //movies/edit/1 or movies/edit?1 because int RoutingCongif.cs movieId is the default BUT movies/edit?movieId=1
