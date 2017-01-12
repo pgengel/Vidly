@@ -179,11 +179,20 @@
     <Compile Include="Migrations\201701121438404_InitialModel.Designer.cs">
       <DependentUpon>201701121438404_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701121451455_AddIsSubCust.cs" />
+    <Compile Include="Migrations\201701121451455_AddIsSubCust.Designer.cs">
+      <DependentUpon>201701121451455_AddIsSubCust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701121456500_Addmembershiptype.cs" />
+    <Compile Include="Migrations\201701121456500_Addmembershiptype.Designer.cs">
+      <DependentUpon>201701121456500_Addmembershiptype.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -265,6 +274,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701121438404_InitialModel.resx">
       <DependentUpon>201701121438404_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701121451455_AddIsSubCust.resx">
+      <DependentUpon>201701121451455_AddIsSubCust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701121456500_Addmembershiptype.resx">
+      <DependentUpon>201701121456500_Addmembershiptype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
